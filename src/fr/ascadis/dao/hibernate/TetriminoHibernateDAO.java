@@ -2,12 +2,14 @@ package fr.ascadis.dao.hibernate;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import fr.ascadis.dao.ITetriminoDAO;
 import fr.ascadis.model.Tetrimino;
 
+@Stateless
 public class TetriminoHibernateDAO implements ITetriminoDAO {
 
 	@PersistenceContext
