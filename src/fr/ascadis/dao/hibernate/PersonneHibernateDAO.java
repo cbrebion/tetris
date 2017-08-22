@@ -2,12 +2,14 @@ package fr.ascadis.dao.hibernate;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import fr.ascadis.dao.IPersonneDAO;
 import fr.ascadis.model.Personne;
 
+@Stateless
 public class PersonneHibernateDAO implements IPersonneDAO {
 	
 	@PersistenceContext

@@ -46,7 +46,7 @@ public class Rendu
 	public static void pagePrincipale(String title, String contentJsp, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		if (title == null)
-			title = "Dï¿½faut";
+			title = "Défaut";
 		
 		req.setAttribute("pageTitle", title);
 		req.setAttribute("contentJsp", contentJsp);

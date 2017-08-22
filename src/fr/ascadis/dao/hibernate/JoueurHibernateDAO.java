@@ -1,12 +1,14 @@
 package fr.ascadis.dao.hibernate;
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import fr.ascadis.dao.IJoueurDAO;
 import fr.ascadis.model.Joueur;
 
+@Stateless
 public class JoueurHibernateDAO implements IJoueurDAO {
 
 	@PersistenceContext

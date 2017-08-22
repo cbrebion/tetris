@@ -15,9 +15,12 @@ public class ApplicationDataInitializationListener implements ServletContextList
 	public void contextInitialized(ServletContextEvent event) {
 		IDAO tetriminoDAO = new TetriminoApplicationDAO();
 		event.getServletContext().setAttribute("tetriminoDAO", tetriminoDAO);
+		
+		IDAO JoueurDAO = new JoueurApplicationDAO();
+		event.getServletContext().setAttribute("joueurDAO", joueurDAO);
 	}
 	
-	
+
 	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
 		

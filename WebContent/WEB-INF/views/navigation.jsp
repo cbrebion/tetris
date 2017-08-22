@@ -9,7 +9,8 @@
 			<c:if test="${ username != null }">
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="home">Accueil</a></li>
-					<li><a href="tetriminos">Tetriminos</a></li>
+					<li><a href="tetriminos">Liste tetriminos</a></li>
+					<li><a href="joueurs">Liste Joueurs</a></li>
 				</ul>
 			</c:if>
 		</div>

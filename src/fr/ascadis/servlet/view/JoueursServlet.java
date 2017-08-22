@@ -19,6 +19,6 @@ public class JoueursServlet extends DataAccessServlet
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
-		Rendu.listeJoueurs("Liste des Joueurs", this.getTetriminoDAO().findAll(), true, this.getServletContext(), req, resp);
+		Rendu.listeJoueurs("Liste des Joueurs", this.getJoueurDAO().findAll(), true, this.getServletContext(), req, resp);
 	}
 }
