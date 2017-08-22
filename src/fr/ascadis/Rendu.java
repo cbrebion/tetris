@@ -34,6 +34,13 @@ public class Rendu
 		pagePrincipale(titrePage, "/WEB-INF/views/tetriminos.jsp", context, req, resp);
 	}
 	
+	public static void listeJoueurs(String titrePage, List<Joueur> joueurs, boolean montrerActions, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+	{
+		req.setAttribute("joueurs", joueurs);
+		req.setAttribute("montrerActions", montrerActions);
+		
+		pagePrincipale(titrePage, "/WEB-INF/views/joueurs.jsp", context, req, resp);
+	}
 	
 	public static void pagePrincipale(String title, String contentJsp, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{

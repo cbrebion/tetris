@@ -12,4 +12,11 @@ public abstract class DataAccessServlet extends HttpServlet
 	protected IDAO getTetriminoDAO() {
 		return (IDAO)this.getServletContext().getAttribute("tetriminoDAO");
 	}
+	
+	// MODIFICATIONS !!!
+	
+	protected IDAO getJoueurDAO() {
+		return (IDAO)this.getServletContext().getAttribute("joueurDAO");
+	}
+	
 }
