@@ -2,32 +2,35 @@ package fr.ascadis.dao.hibernate;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import fr.ascadis.dao.IPersonneDAO;
 import fr.ascadis.model.Personne;
 
 public class PersonneHibernateDAO implements IPersonneDAO {
-
+	
+	@PersistenceContext
+	EntityManager em;
+	
 	@Override
 	public List<Personne> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Personne>)em.createQuery("FROM Personne").getResultList();
 	}
 
 	@Override
 	public Personne find(Personne id) {
-		// TODO Auto-generated method stub
-		return null;
+		return em.find(Personne.class, id);
 	}
 
 	@Override
 	public Personne save(Personne personne) {
-		// TODO Auto-generated method stub
-		return null;
+		return em.merge(personne);
 	}
 
 	@Override
 	public void delete(Personne personne) {
-		// TODO Auto-generated method stub
+		em.remove(personne);
 
 	}
 

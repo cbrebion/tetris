@@ -1,32 +1,35 @@
 package fr.ascadis.dao.hibernate;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import fr.ascadis.dao.IJoueurDAO;
 import fr.ascadis.model.Joueur;
 
 public class JoueurHibernateDAO implements IJoueurDAO {
 
+	@PersistenceContext
+	EntityManager em;
+
 	@Override
 	public List<Joueur> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Joueur>) em.createQuery("FROM Joueur").getResultList();
 	}
 
 	@Override
 	public Joueur find(Joueur id) {
-		// TODO Auto-generated method stub
-		return null;
+		return em.find(Joueur.class, id);
 	}
 
 	@Override
 	public Joueur save(Joueur joueur) {
-		// TODO Auto-generated method stub
-		return null;
+		return em.merge(joueur);
 	}
 
 	@Override
 	public void delete(Joueur joueur) {
-		// TODO Auto-generated method stub
+		em.remove(joueur);
 
 	}
 
