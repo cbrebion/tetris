@@ -26,6 +26,13 @@ public class Rendu
 		pagePrincipale("Bienvenue", "/WEB-INF/views/login.jsp", context, req, resp);
 	}
 	
+	public static void pageSignIn(String titrePage, String username, String nom, String prenom, String password, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+	{
+		req.setAttribute("username", username);
+		
+		pagePrincipale("Bienvenue", "/WEB-INF/views/signin.jsp", context, req, resp);
+	}
+	
 	
 	public static void listeTetriminos(String titrePage, List<Tetrimino> tetriminos, boolean montrerActions, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{

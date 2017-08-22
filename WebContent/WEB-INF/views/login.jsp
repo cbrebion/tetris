@@ -18,4 +18,5 @@
 	<button class="btn waves-effect waves-light" type="submit">
 		OK <i class="material-icons right">send</i>
 	</button>
+	<a href="signin" class="waves-effect waves-light btn"><i class="material-icons right">edit</i>S'inscrire</a>
 </form>
