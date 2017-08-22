@@ -5,15 +5,10 @@ import java.util.List;
 import fr.ascadis.model.Tetrimino;
 
 
-public interface IDAO
+public interface IDAO<T>
 {
-	public List<Tetrimino> findAll();
-	public Tetrimino find(String id);
-	public Tetrimino save(Tetrimino tetrimino);
-	public void delete(Tetrimino tetrimino);
-	
-	public List<Joueur> findAll1();
-	public Joueur find1(String id);
-	public Joueur save(Joueur joueur);
-	public void delete(Joueur joueur);
+	public List<T> findAll();
+	public T find(T id);
+	public T save(T obj);
+	public void delete(T obj);
 }

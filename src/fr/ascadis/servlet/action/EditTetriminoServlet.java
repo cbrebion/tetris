@@ -26,7 +26,7 @@ public class EditTetriminoServlet extends DataAccessServlet
 		if (req.getParameter("tetrimino_id") != null)
 		{
 			String myTetriminoId = req.getParameter("tetrimino_id");
-			myTetrimino = this.getTetriminoDAO().find(myTetriminoId);
+			myTetrimino = (Tetrimino) this.getTetriminoDAO().find(myTetriminoId);
 			
 			if (myTetrimino == null)
 			{
@@ -50,7 +50,7 @@ public class EditTetriminoServlet extends DataAccessServlet
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
-		Tetrimino myTetrimino = this.getTetriminoDAO().find(req.getParameter("tetrimino_id"));
+		Tetrimino myTetrimino = (Tetrimino) this.getTetriminoDAO().find(req.getParameter("tetrimino_id"));
 		
 		// Si on ne trouve pas le Tetrimino, c'est que l'on est en train de l'ajouter !
 		if (myTetrimino == null)
